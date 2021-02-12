@@ -8,9 +8,10 @@ class ItemControl extends React.Component {
     super(props);
     this.state = {
       formVisibleOnPage: false
-    }; 
-
+      masterItemList: [],
+    };
   }
+
   //this is a method that has to be called on an instance of ItemControl class
   handleClick = () => {
     //setState takes an object as an argument this already handles bind
@@ -27,7 +28,7 @@ class ItemControl extends React.Component {
       currentlyVisibleState = <NewItemForm />;
       buttonText = "Return to Item List";
     } else {
-      currentlyVisibleState = <ItemList />;
+      currentlyVisibleState = <ItemList itemList={this.state.masterItemList} />;
       //this is a local state for the refactoring of buttons(and the one in return)
       buttonText = "Add Item";
     }

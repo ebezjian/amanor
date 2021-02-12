@@ -2,6 +2,11 @@ import React from 'react';
 import { v4 } from 'uuid';
 
 function NewItemForm(props) {
+  //this function will triger when the form is submitted
+  function handleNewItemFormSubmission(event) {
+    event.preventDefault();
+
+  }
   return (
     <>
     <form onSubmit={handleNewItemFormSubmission}>
