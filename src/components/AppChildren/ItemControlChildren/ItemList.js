@@ -2,19 +2,19 @@ import React from 'react';
 import Item from './Item';
 import PropTypes from "prop-types";
 
-function ItemList() {
+function ItemList(props) {
   //passing props to ticket.js
   return (
-    <Item 
+    <>
     {props.itemList.map((item, index) =>
       <Item
-      name={item.name}
-      color={item.color}
-      price={item.price}
-      description={item.description}
-      key={index}/>
+        brand={item.brand}
+        color={item.color}
+        price={item.price}
+        description={item.description}
+        key={index}/>
       )}
-    />
+    </>
   );
 }
 ItemList.propTypes = {

@@ -7,8 +7,8 @@ class ItemControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formVisibleOnPage: false
-      masterItemList: [],
+      formVisibleOnPage: false,
+      masterItemList: []
     };
   }
 
@@ -33,7 +33,7 @@ class ItemControl extends React.Component {
     let buttonText = null;
     //access any property in this state
     if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <NewItemForm />;
+      currentlyVisibleState = <NewItemForm onNewItemCreation={this.handleAddingNewItemToList} />;
       buttonText = "Return to Item List";
     } else {
       currentlyVisibleState = <ItemList itemList={this.state.masterItemList} />;
