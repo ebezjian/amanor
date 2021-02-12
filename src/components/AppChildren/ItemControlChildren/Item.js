@@ -14,8 +14,8 @@ Item.propTypes = {
   //PropTypes is uppercase because it is imported library
   brand: PropTypes.string,
   color: PropTypes.string,
-  description: PropTypes.string,
   price: PropTypes.number,
+  description: PropTypes.string,
 };
 
 export default Item;

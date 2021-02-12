@@ -8,11 +8,12 @@ class ItemControl extends React.Component {
     super(props);
     this.state = {
       formVisibleOnPage: false
-    };
+    }; 
+
   }
   //this is a method that has to be called on an instance of ItemControl class
   handleClick = () => {
-    //setState takes an object as an argument
+    //setState takes an object as an argument this already handles bind
     this.setState(prevState => ({
       formVisibleOnPage: !prevState.formVisibleOnPage
     }));
