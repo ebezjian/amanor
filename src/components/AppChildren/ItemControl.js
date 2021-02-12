@@ -19,6 +19,14 @@ class ItemControl extends React.Component {
       formVisibleOnPage: !prevState.formVisibleOnPage
     }));
   };
+
+  handleAddingNewItemToList = (newItem) => {
+    const newMasterItemList = this.state.masterItemList.concat(newItem.masterItemList);
+    this.setState({
+      masterItemList: newMasterItemList,
+      FormVisibleOnPage: false
+    });
+  }
   render() {
     // we havn't determined which component should be visible
     let currentlyVisibleState = null;
