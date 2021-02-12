@@ -50,4 +50,4 @@ class ItemControl extends React.Component {
   }
 }
 
-export default TicketControl;
+export default ItemControl;
