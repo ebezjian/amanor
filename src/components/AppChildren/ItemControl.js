@@ -11,15 +11,20 @@ class ItemControl extends React.Component {
     };
   }
   render() {
+    // we havn't determined which component should be visible
     let currentlyVisibleState = null;
+    let addItemButton = null;
+    //access any property in this state
     if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewItemForm />;
     } else {
       currentlyVisibleState = <ItemList />;
+      addItemButton = <button onClick={this.handleClick}>Add Item</button>;
     }
     return (
       <>
       {currentlyVisibleState}
+      {addItemButton}
       </>
     );
   }
